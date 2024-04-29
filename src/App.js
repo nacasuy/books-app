@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/data/books.json");
+        const res = await fetch("./data/books.json");
         const json = await res.json();
         setBooks(json);
       } catch (error) {
