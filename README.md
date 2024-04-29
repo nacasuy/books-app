@@ -49,3 +49,15 @@ Launches the test runner in the interactive watch mode.\
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+## Deployment
+
+This app was deployed using GitHub Pages https://create-react-app.dev/docs/deployment/
+
+## GitHub Link Repo
+
+https://nacasuy.github.io/books-app/
+
+## Live Books App
+
+https://nacasuy.github.io/books-app/
