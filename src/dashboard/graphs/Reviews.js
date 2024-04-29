@@ -1,5 +1,11 @@
 import { useContext } from "react";
-import { VictoryScatter, VictoryZoomContainer, VictoryChart } from "victory";
+import {
+  VictoryScatter,
+  VictoryZoomContainer,
+  VictoryChart,
+  VictoryAxis,
+  VictoryTooltip,
+} from "victory";
 
 import { prop, clone, isEmpty, sortBy } from "ramda";
 
@@ -25,6 +31,7 @@ const Reviews = () => {
         <NoData />
       ) : (
         <VictoryChart ç containerComponent={<VictoryZoomContainer />}>
+          <VictoryAxis label="Reviews (on hover to see title) and zoom in/out" />
           <VictoryScatter
             data={data}
             style={{
@@ -33,6 +40,8 @@ const Reviews = () => {
                 fill: ({ datum }) => (datum.y % 5 === 0 ? "tomato" : "black"),
               },
             }}
+            labels={({ datum }) => datum.y}
+            labelComponent={<VictoryTooltip />}
           />
         </VictoryChart>
       )}

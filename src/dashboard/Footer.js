@@ -10,10 +10,7 @@ import LoyaltyIcon from "@mui/icons-material/Loyalty";
 
 const Footer = () => {
   return (
-    <Paper
-      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-      elevation={2}
-    >
+    <Paper sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
       <BottomNavigation
         showLabels
         sx={{ background: "#00022e", height: "50px", color: "#fc86aa" }}

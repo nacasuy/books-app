@@ -47,7 +47,10 @@ const Authors = () => {
             domainPadding={5}
             animate={{ duration: 2000, easing: "bounce" }}
           >
-            <VictoryAxis tickFormat={() => ""} />
+            <VictoryAxis
+              label="Authors (on click for more details)"
+              tickFormat={() => ""}
+            />
             <VictoryBar
               style={{
                 data: {

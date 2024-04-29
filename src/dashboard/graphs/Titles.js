@@ -3,8 +3,8 @@ import {
   VictoryChart,
   VictoryBar,
   VictoryTheme,
-  VictoryLabel,
   VictoryAxis,
+  VictoryTooltip,
 } from "victory";
 
 import { groupBy, prop, toPairs, clone, isEmpty, sortBy } from "ramda";
@@ -29,12 +29,15 @@ const Title = () => {
         <NoData />
       ) : (
         <VictoryChart theme={VictoryTheme.material}>
-          <VictoryAxis label="Titles" tickFormat={() => ""} />
+          <VictoryAxis
+            label="Titles (on hover to see title)"
+            tickFormat={() => ""}
+          />
           <VictoryBar
             horizontal
             data={data}
-            labelComponent={<VictoryLabel textAnchor="start" />}
-            labels={data.map((item) => item.x)}
+            labelComponent={<VictoryTooltip />}
+            labels={data.map((item) => `${item.x} - ${item.y}`)}
             labelPlacement="horizontal"
           />
         </VictoryChart>
