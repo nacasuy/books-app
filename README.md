@@ -1,6 +1,10 @@
 # About books-app
 
-This app was created as an exercise. It is a simple react application that renders the following layout:
+This app was created as an exercise.
+
+It uses the following dataset: https://www.kaggle.com/datasets/sootersaalu/amazon-top-50-bestselling-books-2009-2019
+
+It is a simple react application that renders the following layout:
 ![alt text](image.png)
 
 ## Insights
